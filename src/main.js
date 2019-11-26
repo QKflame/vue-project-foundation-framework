@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router' // 路由管理
 import store from './store' // 状态管理
+import './permission/index' // 路由守卫
 import * as filters from './filters' // 全局过滤器
 import api from './requests' // Ajax 请求全部挂载到 Vue 实例上
 import './icons/index' // 使用 svg 图标

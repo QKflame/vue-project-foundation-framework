@@ -4,16 +4,17 @@ import qs from 'qs'
 
 // 处理请求失败的函数
 const handleRequestError = (error) => {
+  // 在这里可以弹窗或其它方式对失败的请求做出处理
   console.log(error)
 }
 
-const service = axios.create({
+const request = axios.create({
   baseURL: process.env.VUE_APP_URL,
   timeout: 5000
 })
 
 /** 请求拦截器 - 每次请求之前，如果存在 token 则在请求头中携带 token **/
-service.interceptors.request.use(
+request.interceptors.request.use(
   config => {
     (store.getters.token) && (config.headers['x-token'] = store.getters.token)
     let header = config.headers['Content-Type']
@@ -34,7 +35,7 @@ service.interceptors.request.use(
 )
 
 /** 响应拦截器 **/
-service.interceptors.response.use(
+request.interceptors.response.use(
   response => {
     if (response.status !== 200) {
       return Promise.reject(response)
@@ -47,4 +48,4 @@ service.interceptors.response.use(
   }
 )
 
-export default service
+export default request

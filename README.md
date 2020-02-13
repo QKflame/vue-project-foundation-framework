@@ -1,8 +1,8 @@
 # vue-project-foundation-framework
 
-``vue-project-foundation-framework `` 是一个非常简洁的、全面的、高度模块化的构建vue项目的基础框架，此框架极多的参考了 [PanJiaChen](https://github.com/PanJiaChen) 前辈的 ``vue-element-admin`` 开源项目，项目地址： https://github.com/PanJiaChen/vue-element-admin 。汲取了 ``vue-element-admin`` 的项目营养，打造了一款适合自己的，也许是能帮助许多人的一个项目框架，这个框架并没有显示使用哪一种UI，也没有PC端和移动端的限制，能够适用与大多数 vue 项目。
+This project is a very concise,comprehensive,and highly modular foundation framework to build a vue project. It is heavily referenced by PanJiaChen's ``vue-element-admin`` open source project and this proeject's address is  https://github.com/PanJiaChen/vue-element-admin. I borrowed ideas from many projects and made a suitable for myself,maybe it can help more people to development. This project has no usage limitation about UI framework, and no usage limitation about PC or the mobile terminal. It can be used as the basic framework for most vue projects.
 
-这个项目是本人对于前端模块化思想的实践，如有不足之处，请多指正。
+This project is my practice of front-end modularization。Please correct me if there are any shortcomings.
 
 ## Project setup
 ```

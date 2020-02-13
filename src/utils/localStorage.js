@@ -25,3 +25,17 @@ class BasicLocalStorage {
     window.localStorage.removeItem(this.key)
   }
 }
+
+// 对用户信息进行缓存 - 距离
+class UserInfo extends BasicLocalStorage {
+  constructor () {
+    super('userInfo')
+  }
+}
+
+const userInfo = new UserInfo()
+
+// 将实例化的对象导出
+export default {
+  userInfo
+}

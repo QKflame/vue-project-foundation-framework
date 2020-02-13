@@ -1,11 +1,15 @@
 import axios from 'axios'
 import store from '../store'
+
+// TODO 引入 UI 框架中的弹窗
+
 import qs from 'qs'
 
 // 处理请求失败的函数
 const handleRequestError = (error) => {
   // 在这里可以弹窗或其它方式对失败的请求做出处理
   console.log(error)
+  // TODO 在此处对请求错误进行弹出提醒
 }
 
 const request = axios.create({

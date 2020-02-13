@@ -1,26 +1,24 @@
 'use strict'
 
-// const path = require('path')
-
-// function resolve (dir) {
-//   return path.join(__dirname, dir)
-// }
-
 module.exports = {
   devServer: {
-    host: '127.0.0.1', // 如果是真机测试，就使用这个IP
-    port: 8980,
-    proxy: {
-      // 配置跨域
-      '/api': {
-        target: '',
-        ws: true,
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': '/'
-        }
-      }
-    }
+    host: '127.0.0.1',
+    port: 8081
+    // proxy: {
+    //   '/api': {
+    //     target: '',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/api': '/'
+    //     }
+    //   }
+    // }
   },
-  publicPath: './'
+  publicPath: process.env.NODE_ENV === 'production' ? '/vue-project-foundation-framework/dist/' : '/',
+  productionSourceMap: false,
+  configureWebpack: {
+    externals: {
+      'AMap': 'AMap' // 高德地图配置
+    }
+  }
 }
